@@ -1,0 +1,4 @@
+Flask
+SQLite3
+bcrypt
+flask_wtf
