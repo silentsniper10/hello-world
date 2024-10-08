@@ -49,5 +49,5 @@
     }
   },
   "portsAttributes": {},
-  "postCreateCommand": "pip3 install requirements.txt"
+  "postCreateCommand": "pip3 install --user -r requirements.txt"
 }
