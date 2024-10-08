@@ -8,19 +8,29 @@
                 "editor.formatOnPaste": true,
                 "editor.formatOnSave": true,
                 "editor.defaultFormatter": "ms-python.black-formatter",
-                "editor.fontSize": 18
+                "editor.fontSize": 18,
+                "terminal.integrated.defaultProfile.windows": "Git Bash",
+				"window.restoreWindows": "preserve",
+				"workbench.editorAssociations": {
+        			"*.md": "vscode.markdown.preview.editor"
+    			}
             },
             "extensions": [
-                "ms-python.flake8",
+                "McCarter.start-git-bash",
+		"alexcvzz.vscode-sqlite",
+		"medo64.render-crlf",
+		"ms-python.flake8",
                 "ms-python.black-formatter",
                 "oderwat.indent-rainbow",
                 "ms-python.python",
                 "ms-python.vscode-pylance",
-                "ms-vscode-remote.remote-containers",
-                "GitHub.codespaces",
-                "McCarter.start-git-bash",
-                "alexcvzz.vscode-sqlite",
-                "qwtel.sqlite-viewer"
+                "yy0931.vscode-sqlite3-editor",
+		"oderwat.indent-rainbow",
+		"ms-vscode-remote.remote-containers",
+		"ms-vscode-remote.remote-wsl",
+		"GitHub.codespaces",
+		"ms-vscode-remote.remote-wsl",
+		"ms-azuretools.vscode-docker"
             ]
         }
     },
