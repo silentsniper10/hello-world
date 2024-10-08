@@ -1,4 +1,4 @@
 Flask
-SQLite3
+sqlite
 bcrypt
 flask_wtf
