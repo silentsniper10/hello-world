@@ -1,4 +1,4 @@
-flask
+Flask==2.3.2
 SQLite3
 bcrypt
 flask_wtf
