@@ -403,7 +403,7 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
         return render_template('/index.html')
 
     if __name__ == '__main__':
-        app.run(debug=True, host='0.0.0.0', port=80)
+        app.run(debug=True, host='0.0.0.0', port=5000)
 ```
 
 2. Run the builtin webserver.
