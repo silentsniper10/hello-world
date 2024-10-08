@@ -42,24 +42,16 @@ This screen capture shows how the final PWA will render to the user.
 4. CSS Basics
 5. Python
 
-## Open a GIT BASH terminal
-
-> [!NOTE]
-> From here in, you should aim to run all commands from the CLI. You are discouraged from left/right clicking the GUI. You will find it feels slow at first but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
-
-Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> and choose Git Bash from the menu option in the top right of the terminal shell.
-
-![Screen capture of the menu options for terminals](/docs/README_resources/git_bash_shell.png "Choose Git Bash from the list")
-
 ## STEPS TO BUILDING YOUR FIRST PWA
 
 ### Setup your environment
 
 ![Screen recording of setting up VSCode](/docs/README_resources/get_vscode_started.gif "Follow these steps to setup VSCode")
 
-1. Helpful VSCode settings are configured in [.vscode/settings.json]([.vscode/settings.json) which will automatically apply if you are not using a custom profile. If you are using a custom profile it is suggested you manually apply those setting to your profile especially the \*.md file asscoaition so the README.md automaticlaly opens in preview mode.
+> [!NOTE]
+> Helpful VSCode settings are configured in [.vscode/settings.json](/.vscode/settings.json) which will automatically apply if you are not using a custom profile. If you are using a custom profile it is suggested you manually apply those setting to your profile especially the \*.md file association so the README.md default opens in preview mode and setting _bash_ as your default terminal.
 
-2. Get the working files which includes this README.md
+1. Get the working files which includes this README.md
     - Open a new window in VSCode
     - Choose your working directory
     - ```bash
@@ -68,16 +60,16 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
       ```
 
 > [!TIP]
-> Alternatively you can fork the [template repository](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template) to your own GitHub account and open it in a Codespace in which all dependencis and extensions will be automatically installed.
+> Alternatively you can fork the [template repository](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template) to your own GitHub account and open it in a Codespace in which all dependences and extensions will be automatically installed.
 
-1. Install necessary depenencies.
+2. Install necessary depenencies.
 
 ```bash
     pip install sqlite
     pip install flask
 ```
 
-2. Install the necessary extensions for this tutorial.
+3. Install the necessary extensions for this tutorial.
 
 | Required Extensions | Suggested Python Extensions |
 | ------ | ------ |
@@ -85,6 +77,17 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
 | [McCarter.start-git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash) | [ms-python.black-formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) |
 | [alexcvzz.vscode-sqlite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) |
 | [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf) | [oderwat.indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) |
+
+---
+
+### Open a GIT BASH terminal
+
+> [!NOTE]
+> From here in, you should aim to run all commands from the CLI. You are discouraged from left/right clicking the GUI. You will find it feels slow at first but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
+
+Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> and choose Git Bash from the menu option in the top right of the terminal shell.
+
+![Screen capture of the menu options for terminals](/docs/README_resources/git_bash_shell.png "Choose Git Bash from the list")
 
 ---
 
