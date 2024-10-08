@@ -49,5 +49,5 @@
     }
   },
   "portsAttributes": {},
-  "postCreateCommand": "npm install -r requirements.txt"
+  "postCreateCommand": "pip3 install requirements.txt"
 }
