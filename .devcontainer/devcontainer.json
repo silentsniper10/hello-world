@@ -1,17 +1,25 @@
 {
-  "name": "HTML, CSS & JS",
+  "name": "Python Flask Development Container",
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "hostRequirements": {
     "cpus": 4
   },
   "waitFor": "onCreateCommand",
-  "updateContentCommand": "npm install",
+  "updateContentCommand": "pip install --user -r requirements.txt",
   "postCreateCommand": "",
   "postAttachCommand": {
-    "server": "npm update",
-    "server": "npm start"
+    "server": "flask --debug run"
+  },
+  "portsAttributes": {
+    "5000": {
+      "label": "Application",
+      "onAutoForward": "openPreview"
+    }
   },
   "customizations": {
+    "codespaces": {
+      "openFiles": ["docs/README.md"]
+    },
     "vscode": {
       "settings": {
         "files.autoSave": "onFocusChange",
@@ -48,6 +56,5 @@
       ]
     }
   },
-  "portsAttributes": {},
-  "postCreateCommand": "pip3 install --user -r requirements.txt"
+  "forwardPorts": [5000]
 }
