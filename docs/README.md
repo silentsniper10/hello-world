@@ -10,22 +10,22 @@ A [Progressive Web Apps (PWAs)](https://developer.mozilla.org/en-US/docs/Web/Pro
 
 ### Technical features of PWAs
 
-Because PWAs are websites, they have the same basic features as any other website: at least one HTML page, which loads CSS and JavaScript. Javascript is the language of the web and is exclusivly used for client side front end, python in the web context can only be used in the back end. Like a normal website, the JavaScript loaded by the page has a global Window object and can access all the Web APIs that are available through that object. The PWA standard as defined by [W3C Standards](https://www.w3.org/standards/) has some specific features additonal to a website:
+Because PWAs are websites, they have the same basic features as any other website: at least one HTML page, which loads CSS and JavaScript. Javascript is the language of the web and is exclusively used for the client-side front end; python, in the web context, can only be used in the back end. Like a normal website, the JavaScript loaded by the page has a global Window object and can access all the Web APIs that are available through that object. The PWA standard as defined by [W3C Standards](https://www.w3.org/standards/) has some specific features additional to a website:
 
 | Feature | Purpose |
 | ------ | ------- |
-| manifest.json | A app manifest file, which, at a minimum, provides information that the operating system needs to install the PWA, such as the app name, screen orientation and icon set for different sized viewports. |
-| serviceworker.js | A service worker, which, at a minimum, manages the caching that enables a online and offline experience whilst also interfacing with API's such as the [notification web API](https://developer.mozilla.org/en-US/docs/Web/API/Notification). It's important to udnerstand that this JS file cannot control the DOM of the application. |
-| icons & screanshots | A set of icons and screenshots that are used in when uploading to an app store and when installing it as a native application. It is these icons that will be used in the desktop or app launcher when installed. |
+| manifest.json | An app manifest file, which, at a minimum, provides information that the operating system needs to install the PWA, such as the app name, screen orientation and icon set for different-sized viewports. |
+| serviceworker.js | A service worker, which, at a minimum, manages the caching that enables an online and offline experience whilst also interfacing with API's such as the [notification web API](https://developer.mozilla.org/en-US/docs/Web/API/Notification). It's important to udnerstand that this JS file cannot control the DOM of the application. |
+| Icons & screenshots | A set of icons and screenshots that are used when uploading to an app store and when installing it as a native application. It is these icons that will be used in the desktop or app launcher when installed. |
 | Installable | Because of the information contained in the manifest.json all PWA's can be installed like a native app. They can also be packaged and uploaded to the Google, Microsoft & Apple app stores. |
-| Cached locally | Because the service worker details all apps and pages to be cached (all pages must have a *.html name) the app and it's resources can be cached locally for quick load times. _Note backend apps where the web server serves all pages from the DNS root do not meet the PWA specification._ |
+| Cached locally | Because the service worker details all apps and pages to be cached (all pages must have a *.html name), the app and its resources can be cached locally for quick load times. _Note backend apps where the web server serves all pages from the DNS root do not meet the PWA specification._ |
 
 The below image illustrates how the servicework manages online and offline behaviour.
 
 ![A highlevel illustration of the service worker](/docs/README_resources/Progressive-Web-Apps-Architecture.png "The service worker handles the initial requests and sets the behaviour depending on if the app is on or offline.")
 
 ## Your end product
-This screen capture shows how the final PWA will render to the user.
+This screen capture shows how the final PWA will be rendered to the user.
 
 ![Screen capture of the finished PWA](/docs/README_resources/final_app.png "This is what your application will look like")
 
@@ -49,27 +49,9 @@ This screen capture shows how the final PWA will render to the user.
 ![Screen recording of setting up VSCode](/docs/README_resources/get_vscode_started.gif "Follow these steps to setup VSCode")
 
 > [!NOTE]
-> Helpful VSCode settings are configured in [.vscode/settings.json](/.vscode/settings.json) which will automatically apply if you are not using a custom profile. If you are using a custom profile it is suggested you manually apply those setting to your profile especially the \*.md file association so the README.md default opens in preview mode and setting _bash_ as your default terminal.
+> Helpful VSCode settings are configured in [.vscode/settings.json](/.vscode/settings.json) which will automatically apply if you are not using a custom profile. If you are using a custom profile, it is suggested you manually apply those settings to your profile, especially the \*.md file association, so the README.md default opens in preview mode and setting _bash_ as your default terminal.
 
-1. Get the working files which includes this README.md
-    - Open a new window in VSCode
-    - Choose your working directory
-    - ```bash
-        git clone https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template.git
-        cd Flask_PWA_Programming_For_The_Web_Task_Template
-      ```
-
-> [!TIP]
-> Alternatively you can fork the [template repository](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template) to your own GitHub account and open it in a Codespace in which all dependences and extensions will be automatically installed.
-
-2. Install necessary depenencies.
-
-```bash
-    pip install sqlite
-    pip install flask
-```
-
-3. Install the necessary extensions for this tutorial.
+1. Install the necessary extensions for this tutorial.
 
 | Required Extensions | Suggested Python Extensions |
 | ------ | ------ |
@@ -78,22 +60,39 @@ This screen capture shows how the final PWA will render to the user.
 | [alexcvzz.vscode-sqlite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) |
 | [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf) | [oderwat.indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) |
 
----
-
-### Open a GIT BASH terminal
+2. Open a GIT BASH terminal
 
 > [!NOTE]
-> From here in, you should aim to run all commands from the CLI. You are discouraged from left/right clicking the GUI. You will find it feels slow at first but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
+> From now on, you should aim to run all commands from the CLI. You are discouraged from left/right clicking the GUI. You will find it feels slow at first, but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
 
 Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> and choose Git Bash from the menu option in the top right of the terminal shell.
 
 ![Screen capture of the menu options for terminals](/docs/README_resources/git_bash_shell.png "Choose Git Bash from the list")
 
+
+3. Get the working files, which include this README.md
+    - Open a new window in VSCode
+    - Choose your working directory
+    - ```bash
+        git clone https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template.git
+        cd Flask_PWA_Programming_For_The_Web_Task_Template
+      ```
+
+> [!TIP]
+> Alternatively, you can fork the [template repository](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template) to your own GitHub account and open it in a Codespace in which all dependencies and extensions will be automatically installed.
+
+4. Install necessary dependencies.
+
+```bash
+    pip install sqlite
+    pip install flask
+```
+
 ---
 
 ### Create files and folders for your Flask Project
 
-1. Files or folders that start with a dot (`\.*` or `.*.*`) can't be served by the webserver. This adds a layer of security for assets that you do not want to be public.
+1. Files or folders that start with a dot (`\.*` or `.*.*`) can't be served by the web server. This adds a layer of security for assets that you do not want to be public.
 
 ```bash
     touch .workingDocuments
@@ -106,7 +105,7 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
     code LICENSE
 ```
 
-Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into the file. GNU GPL is a free software license, or copyleft license, that guarantee end users the freedoms to run, study, share, and modify the software.
+Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into the file. GNU GPL is a free software license, or copyleft license, that guarantees end users the freedom to run, study, share, and modify the software.
 3. Create your directory structure and some base files using BASH scripts reading text files.
 
 ```text
@@ -123,7 +122,7 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
     └── database_manager.py
 ```
 
-3. Populate a text file with a list of folders you need in the root of your project.
+3. Populate a text file with a list of folders you need at the root of your project.
 
 ```bash
     touch folders.txt
@@ -139,7 +138,7 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
     done < folders.txt
 ```
 
-5. Populate the file with a list of files you need in the root of your project.
+5. Populate the file with a list of files you need at the root of your project.
 
 ```bash
     touch files.txt
@@ -157,8 +156,8 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 
 > [!IMPORTANT]
 >
-> - The last list item needs a line ending so make sure there is a blank last line in the file.
-> - You will find that all file and folder names have an unwanted `space` character at the end. This is because you are using a BASH emulator on Windows operating system. Bash is a Unix language that uses [LF the unicode character 000A while Windows uses CRLF the Unicode characters 000D + 000A](https://learn.microsoft.com/en-us/visualstudio/ide/encodings-and-line-breaks?view=vs-2022). Because you have installed the [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf) extension just click on `CRLF` in the bottom bar of VSCode and choose `LF` to change the line ending before running your BASH script.
+> - The last list item needs a line ending, so make sure there is a blank last line in the file.
+> - You will find that all file and folder names have an unwanted `space` character at the end. This is because you are using a BASH emulator on the Windows operating system. Bash is a Unix language that uses [LF Unicode character 000A while Windows uses CRLF Unicode characters 000D + 000A](https://learn.microsoft.com/en-us/visualstudio/ide/encodings-and-line-breaks?view=vs-2022). Because you have installed the [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf) extension, click on `CRLF` in the bottom bar of VSCode and choose `LF` to change the line ending before running your BASH script.
 
 ---
 
@@ -172,21 +171,21 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 ```
 
 > [!NOTE]
-> The following SQL queries are provided as an example only, students are encouraged to select their own content and design a database schema for it, ideas include:
+> The following SQL queries are provided as an example only. Students are encouraged to select their content and design a database schema for it; ideas include:
 >
-> - Favourate bands
-> - Favourate movies
-> - Favourate games
-> - Favourate books
+> - Favourite bands
+> - Favourite movies
+> - Favourite games
+> - Favourite books
 > - etc
 
-1. Run SQL queries to setup your database table. When asked choose the database.db.
+1. Run SQL queries to set up your database table. When asked, choose the database.db.
 
 ```sql
     CREATE TABLE extension(extID INTERGER NOT NULL PRIMARY KEY,name TEXT NOT NULL, hyperlink TEXT NOT NULL,about TEXT NOT NULL,image TEXT NOT NULL,language TEXT NOT NULL);
 ```
 
-2. After running each query put `--` infront of the query to turn it into a comment so it doesn't run again and error.
+2. After running each query, put `--` in front of the query to turn it into a comment so it doesn't run again, causing an error.
 3. Run SQL queries to populate your table.
 
 ```sql
@@ -220,7 +219,7 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 2. Design simplified app icon 512px X 512px names favicon.png.
 3. Web optimise the images using [TinyPNG](https://tinypng.com/).
 4. Save the files into the static/images folder.
-5. Rename the 512x512 icon to icon-512x512.png then resize and rename it as follows:
+5. Rename the 512x512 icon to icon-512x512.png, then resize and rename it as follows:
    - icon-128x128.png
    - icon-192x192.png
    - icon-384x384.png
@@ -228,7 +227,7 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 6. Web optimise the images using [TinyPNG](https://tinypng.com/) and save them into the static/icons.
 
 > [!NOTE]
-> Graphic design is not the focus of this course, you should not spend excessive time designing logos and icons.
+> Graphic design is not the focus of this course. You should not spend excessive time designing logos and icons.
 
 ---
 
@@ -243,7 +242,7 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
     code layout.html
 ```
 
-5. Insert the basic HTML struture in your templates/layout.html file.
+5. Insert the basic HTML structure in your templates/layout.html file.
 
 ```html
     <!DOCTYPE html>
@@ -413,10 +412,10 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
     python main.py
 ```
 
-3. Visit your website and look at the souce in developer tools to see how the page has rendered.
+3. Visit your website and look at the source in developer tools to see how the page has been rendered.
 
 > [!NOTE]
-> To explain how Jinga2 works in this example; when index.html is called the render will start with layout.html with the code from partials/menu.html inserted where `{% include "partials/menu.html" %}` is and the index.html content that is between the `{% block content %}` and `{% endblock %}` will be inserted in the same tags in the layout.html.
+> To explain how Jinga2 works in this example when index.html is called, the render will start with layout.html with the code from partials/menu.html inserted where `{% include "partials/menu.html" %}` is and the index.html content that is between the `{% block content %}` and `{% endblock %}` will be inserted in the same tags in the layout.html.
 
 ---
 
@@ -553,7 +552,7 @@ def index():
     code manifest.json
 ```
 
-2. Configure the manifest.json to the PWA standard by inserting the json below and validating the json with [jsonlint](https://jsonlint.com/). The manifest.json sets the configuration for the installtion and caching of the PWA.
+2. Configure the manifest.json to the PWA standard by inserting the JSON below and validating the JSON with [jsonlint](https://jsonlint.com/). The manifest.json sets the configuration for the installation and caching of the PWA.
 
 ```json
     {
@@ -637,7 +636,7 @@ def index():
     code ap.js
 ```
 
-2. Configure the app.js to initiate the servicework.js ny inserting the JS. This ensures that when the window (app) loads that the serviceworker.js is called to memory.
+2. Configure the app.js to initiate the servicework.js by inserting the JS. This ensures that when the window (app) loads the serviceworker.js is called to memory.
 
 ```js
     if ("serviceWorker" in navigator) {
@@ -655,7 +654,7 @@ def index():
     code serviceworker.js
 ```
 
-1. Configure the serviceworker.js by inserting the JS. The servicworker.js as the same suggest is the file that does all the work in a PWA including cacheing and API intergration for the [WEB API's](https://developer.mozilla.org/en-US/docs/Web/API).
+1. Configure the serviceworker.js by inserting the JS. The serviceworker.js, as the name suggests, is the file that does all the work in a PWA, including caching and API integration for the [WEB APIs](https://developer.mozilla.org/en-US/docs/Web/API).
 
 ```js
 const assets = [
@@ -721,22 +720,22 @@ const assets = [
 ---
 
 ### Validate your PWA
-Validation is important to ensure the app is compliant to [W3 web standards](https://www.w3.org/standards/).
-1. Open your website in Chrome and open developer tools (F12), run a Lighthouse report.
+Validation is important to ensure the app is compliant with [W3 web standards](https://www.w3.org/standards/).
+1. Open your website in Chrome, open developer tools (F12), and run a Lighthouse report.
 ![Screen cpature of Chrome Lighthouse report](/docs/README_resources/Chrome_Lighthouse_Report.png "Click F12 and choose Lighthouse on the top menu of your developer tools").
-2. Open your website in Edge and open developer tools (F12), look at the application report.
+2. Open your website in Edge, open developer tools (F12), and look at the application report.
 ![Screen cpature of Chrome Lighthouse report](/docs/README_resources/Edge_Application_Report.png "Click F12 and choose Lighthouse on the top menu of your developer tools").
 
 ---
 
 ### Take your app further
-The following code snippets will help you create a simple form in the add.html page. This form is for people to add their details to an email database for updates on your catalogue. Less explict instructions have been provided, students are encouraged to practice their BASH, SQL Flask and HTML to bring it all together. The screen shot below is what the page should like like and when users submit the database is updated.
+The following code snippets will help you create a simple form on the add.html page. This form allows people to add their details to an email database for updates on your catalogue. Less explicit instructions have been provided; students are encouraged to practice their BASH, SQL Flask, and HTML to bring it all together. The screenshot below shows what the page should look like, and when users submit, the database is updated.
 
 ![Screen capture of the finished PWA](/docs/README_resources/form_example.png "This is what your application will look like").
 
 1. Page specifications:
     - Simple form where the user inserts their name and email address
-    - When they click submit the data base is updated
+    - When they click submit, the database is updated
     - The input form must be styled to be consistent with the rest of the website
     - A message confirming submission is returned to the user
 3. SQL schema specifications:
@@ -756,7 +755,7 @@ The following code snippets will help you create a simple form in the add.html p
 ```
 
 > [!NOTE]
-> You will need to catch the expection of a duplicate email
+> You will need to catch the expectation of a duplicate email
 
 ```python
     @app.route('/add.html', methods=['POST', 'GET'])
