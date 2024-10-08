@@ -16,9 +16,6 @@
     }
   },
   "customizations": {
-    "codespaces": {
-      "openFiles": ["docs/README.md"]
-    },
     "vscode": {
       "settings": {
         "files.autoSave": "onFocusChange",
