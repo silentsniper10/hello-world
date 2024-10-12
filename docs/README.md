@@ -12,19 +12,22 @@ A [Progressive Web Apps (PWAs)](https://developer.mozilla.org/en-US/docs/Web/Pro
 
 Because PWAs are websites, they have the same basic features as any other website: at least one HTML page, which loads CSS and JavaScript. Javascript is the language of the web and is exclusively used for the client-side front end; python, in the web context, can only be used in the back end. Like a normal website, the JavaScript loaded by the page has a global Window object and can access all the Web APIs that are available through that object. The PWA standard as defined by [W3C Standards](https://www.w3.org/standards/) has some specific features additional to a website:
 
-| Feature | Purpose |
-| ------ | ------- |
-| manifest.json | An app manifest file, which, at a minimum, provides information that the operating system needs to install the PWA, such as the app name, screen orientation and icon set for different-sized viewports. |
-| serviceworker.js | A service worker, which, at a minimum, manages the caching that enables an online and offline experience whilst also interfacing with API's such as the [notification web API](https://developer.mozilla.org/en-US/docs/Web/API/Notification). It's important to udnerstand that this JS file cannot control the DOM of the application. |
-| Icons & screenshots | A set of icons and screenshots that are used when uploading to an app store and when installing it as a native application. It is these icons that will be used in the desktop or app launcher when installed. |
-| Installable | Because of the information contained in the manifest.json all PWA's can be installed like a native app. They can also be packaged and uploaded to the Google, Microsoft & Apple app stores. |
-| Cached locally | Because the service worker details all apps and pages to be cached (all pages must have a *.html name), the app and its resources can be cached locally for quick load times. _Note backend apps where the web server serves all pages from the DNS root do not meet the PWA specification._ |
+| Feature             | Purpose                                                                                                                                                                                                                                                                                                                                  |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| manifest.json       | An app manifest file, which, at a minimum, provides information that the operating system needs to install the PWA, such as the app name, screen orientation and icon set for different-sized views.                                                                                                                                     |
+| serviceworker.js    | A service worker, which, at a minimum, manages the caching that enables an online and offline experience whilst also interfacing with API's such as the [notification web API](https://developer.mozilla.org/en-US/docs/Web/API/Notification). It's important to understand that this JS file cannot control the DOM of the application. |
+| Icons & screenshots | A set of icons and screenshots that are used when uploading to an app store and when installing it as a native application. It is these icons that will be used in the desktop or app launcher when installed.                                                                                                                           |
+| Installable         | Because of the information contained in the manifest.json all PWA's can be installed like a native app. They can also be packaged and uploaded to the Google, Microsoft & Apple app stores.                                                                                                                                              |
+| Cached locally      | Because the service worker details all apps and pages to be cached (all pages must have a \*.html name), the app and its resources can be cached locally for quick load times.                                                                                                                                                           |
+
+_Note backend apps where the web server serves all pages from the DNS root do not meet the PWA specification._
 
 The below image illustrates how the servicework manages online and offline behaviour.
 
 ![A highlevel illustration of the service worker](/docs/README_resources/Progressive-Web-Apps-Architecture.png "The service worker handles the initial requests and sets the behaviour depending on if the app is on or offline.")
 
 ## Your end product
+
 This screen capture shows how the final PWA will be rendered to the user.
 
 ![Screen capture of the finished PWA](/docs/README_resources/final_app.png "This is what your application will look like")
@@ -53,30 +56,32 @@ This screen capture shows how the final PWA will be rendered to the user.
 
 1. Install the necessary extensions for this tutorial.
 
-| Required Extensions | Suggested Python Extensions |
-| ------ | ------ |
-| [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) | [ms-python.flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8) |
-| [McCarter.start-git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash) | [ms-python.black-formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter) |
-| [alexcvzz.vscode-sqlite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite) | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python) |
-| [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf) | [oderwat.indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow) |
+| Required Extensions                                                                                    | Suggested Python Extensions                                                                                  |
+| ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
+| [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf)           | [ms-python.flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)                     |
+| [McCarter.start-git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash) | [ms-python.black-formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)\* |
+| [alexcvzz.vscode-sqlite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)   | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)                     |
+|                                                                                                        | [oderwat.indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)         |
+|                                                                                                        | [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)\*       |
 
-2. Open a GIT BASH terminal
+_\*You will need to configure your formatters, it is recommended esbenp.prettier-vscode is your default formatter and ms-python.black-formatter is the Python language formatter_
 
-> [!NOTE]
+> [!IMPORTANT]
 > From now on, you should aim to run all commands from the CLI. You are discouraged from left/right clicking the GUI. You will find it feels slow at first, but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
 
 Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> and choose Git Bash from the menu option in the top right of the terminal shell.
 
 ![Screen capture of the menu options for terminals](/docs/README_resources/git_bash_shell.png "Choose Git Bash from the list")
 
+1. Get the working files, which include this README.md
+   - Open a new window in VSCode
+   - Choose your working directory
+   -
 
-3. Get the working files, which include this README.md
-    - Open a new window in VSCode
-    - Choose your working directory
-    - ```bash
-        git clone https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template.git
-        cd Flask_PWA_Programming_For_The_Web_Task_Template
-      ```
+````bash
+       git clone https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template.git
+       cd Flask_PWA_Programming_For_The_Web_Task_Template
+     ```
 
 > [!TIP]
 > Alternatively, you can fork the [template repository](https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template) to your own GitHub account and open it in a Codespace in which all dependencies and extensions will be automatically installed.
@@ -86,7 +91,7 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
 ```bash
     pip install sqlite
     pip install flask
-```
+````
 
 ---
 
@@ -105,20 +110,19 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
     code LICENSE
 ```
 
-Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into the file. GNU GPL is a free software license, or copyleft license, that guarantees end users the freedom to run, study, share, and modify the software.
-3. Create your directory structure and some base files using BASH scripts reading text files.
+Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into the file. GNU GPL is a free software license, or copyleft license, that guarantees end users the freedom to run, study, share, and modify the software. 3. Create your directory structure and some base files using BASH scripts reading text files.
 
 ```text
     ├── .database
     ├── .workingdocuments
     ├── static
     │   ├── css
-    │   ├── icons  
-    │   ├── images  
-    │   ├── js  
-    ├── templates  
-    ├── LICENSE  
-    ├── main.py  
+    │   ├── icons
+    │   ├── images
+    │   ├── js
+    ├── templates
+    ├── LICENSE
+    ├── main.py
     └── database_manager.py
 ```
 
@@ -132,9 +136,9 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 4. Run a BASH script to read the text file and create the folders listed in it.
 
 ```bash
-    while read -r line; do   
-    echo $line  
-    mkdir -p $line  
+    while read -r line; do
+    echo $line
+    mkdir -p $line
     done < folders.txt
 ```
 
@@ -148,9 +152,9 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 6. Run a BASH script to read the text file and create the files listed in it.
 
 ```bash
-    while read -r line; do   
-    echo $line  
-    touch -p $line  
+    while read -r line; do
+    echo $line
+    touch -p $line
     done < files.txt\
 ```
 
@@ -242,29 +246,29 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
     code layout.html
 ```
 
-5. Insert the basic HTML structure in your templates/layout.html file.
+1. Insert the basic HTML structure in your templates/layout.html file.
 
 ```html
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self';">
-        <link rel="stylesheet" href="static/css/style.css" />
-        <title>VSCode Extension Catalogue</title>
-        <link rel="manifest" href="static/manifest.json" />
-        <link rel="icon" type="image/x-icon" href="static/images/favicon.png">
-    </head>
-    <body>
-        <main>
-        {% include "partials/menu.html" %}
-        {% block content %}{% endblock %}
-        </main>
-        <script src="static/js/app.js"></script>
-    </body>
-    </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self';" />
+    <link rel="stylesheet" href="static/css/style.css" />
+    <title>VSCode Extension Catalogue</title>
+    <link rel="manifest" href="static/manifest.json" />
+    <link rel="icon" type="image/x-icon" href="static/images/favicon.png" />
+  </head>
+
+  <body>
+    <main>
+      {% include "partials/menu.html" %} {% block content %}{% endblock %}
+    </main>
+    <script src="static/js/app.js"></script>
+  </body>
+</html>
 ```
 
 6. Insert the block content into index.html, you will add more later.
@@ -275,12 +279,9 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 ```
 
 ```html
-    {% extends 'layout.html' %}
-    {% block content %}
-        <div class="container">
-
-        </div>
-    {% endblock %}
+{% extends 'layout.html' %} {% block content %}
+<div class="container"></div>
+{% endblock %}
 ```
 
 ---
@@ -296,23 +297,26 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 1. Insert the css code into static/css/style.css.
 
 ```css
-    @import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
-    * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-    }
-    body {
-        background: #fdfdfd;
-        font-family: "Nunito", sans-serif;
-        font-size: 1rem;
-    }
-    main {
-        max-width: 900px;
-        margin: auto;
-        padding: 0.5rem;
-        text-align: center;
-    }
+@import url("https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fdfdfd;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+}
+
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0.5rem;
+  text-align: center;
+}
 ```
 
 ---
@@ -330,52 +334,58 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 1. Insert the menu HTML into menu.html.
 
 ```html
-    <nav>
-        <img src="static\images\logo.png" alt="VSCode Extensions site logo." />
-        <h1>VSCode Extensions</h1>
-        <ul class="topnav">
-            <li><a href="#">Home</a></li>
-            <li><a href="add.html">Add me</a></li>
-            <li><a href="about.html">About</a></li>
-        </ul>
-    </nav> 
+<nav>
+  <img src="static\images\logo.png" alt="VSCode Extensions site logo." />
+  <h1>VSCode Extensions</h1>
+  <ul class="topnav">
+    <li><a href="#">Home</a></li>
+    <li><a href="add.html">Add me</a></li>
+    <li><a href="about.html">About</a></li>
+  </ul>
+</nav>
 ```
 
 ```bash
-    `cd ../../static/css`  
+    `cd ../../static/css`
     `code style.css`
-```  
+```
 
 2. Style the menu by inserting this below your existing CSS in static/css/style.css.
 
 ```css
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    nav img {
-        height:100px;
-    }
-    nav ul {
-        list-style: none;
-        display: flex;
-    }
-    nav li {
-        margin-right: 1rem;
-    }
-    nav ul li a {
-        text-decoration-line:none;
-        text-transform: uppercase; 
-        color: #393b45;
-    }
-    nav ul li a:hover {
-        color: #14E6DD;
-    }
-    nav h1 {
-        color: #106D69;
-        margin-bottom: 0.5rem;
-    }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  height: 100px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav li {
+  margin-right: 1rem;
+}
+
+nav ul li a {
+  text-decoration-line: none;
+  text-transform: uppercase;
+  color: #393b45;
+}
+
+nav ul li a:hover {
+  color: #14e6dd;
+}
+
+nav h1 {
+  color: #106d69;
+  margin-bottom: 0.5rem;
+}
 ```
 
 <HR
@@ -458,14 +468,20 @@ def index():
 3. Use Janga2 to pass the data (which is a [tuple](https://www.w3schools.com/python/python_tuples.asp)) to front end content. Insert the HTML inside the `<div class="container">` of the index.html.
 
 ```html
-    {% for row in content %}
-        <div class="card">
-            <img class="card-image" src='{{ row[4] }}' alt="Product image for the {{ row[1] }} VSCode extension.">
-            <h1 class="card-name">{{ row[1] }}</h1>
-            <p class="card-about">{{ row[3] }}</p>
-            <a class="card-link" href="{{ row[2] }}"><button class="btn">Read More</button></a>
-        </div> 
-    {% endfor %} 
+{% for row in content %}
+<div class="card">
+  <img
+    class="card-image"
+    src="{{ row[4] }}"
+    alt="Product image for the {{ row[1] }} VSCode extension."
+  />
+  <h1 class="card-name">{{ row[1] }}</h1>
+  <p class="card-about">{{ row[3] }}</p>
+  <a class="card-link" href="{{ row[2] }}"
+    ><button class="btn">Read More</button></a
+  >
+</div>
+{% endfor %}
 ```
 
 ```bash
@@ -476,69 +492,77 @@ def index():
 4. Style the cards by inserting this below your existing CSS in static/css/style.css.
 
 ```css
-    .container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
-        grid-gap: 1rem;
-        justify-content: center;
-        align-items: center;
-        margin: auto;
-        padding: 1rem 0;
-    }
-    .card {
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        width: 17rem;
-        background: #fff;
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-        border-radius: 10px;
-        margin: auto;
-        overflow: hidden;
-    }
-    .card-image {
-        width: 100%;
-        height: 15rem;
-        object-fit: cover;
-    }
-    .card-name {
-        color: #222;
-        font-weight: 700;
-        text-transform: capitalize;
-        font-size: 1.1rem;
-        margin-top: 0.5rem;
-    }
-    .card-about {
-        text-overflow: ellipsis;
-        width: 15rem;
-        white-space: nowrap;
-        overflow: hidden;
-        margin-bottom:1rem;
-    }
-    .btn {
-        border:none;
-        background:none;
-        border-radius:5px;
-        box-shadow:1px 1px 2px rgba(21, 21, 21, 0.1);
-        cursor:pointer;
-        font-size:1.25rem;
-        margin:0 1rem;
-        padding:.25rem 2rem;
-        transition:all .25s ease-in-out;
-        background: hsl(110,21%,93%);
-        color:hsl(141,100%,22%);
-        margin-bottom:1rem;
-    }
-        .btn:focus, .btn:hover {
-        box-shadow:1px 1px 2px rgba(21, 21, 21, 0.2);
-        background: hsl(111,21%,86%);
-    }
-    .about-container {
-        font-size:1.25rem;
-        margin-top:2rem;
-        text-align: justify;
-        text-justify: inter-word;
-    }
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 17rem;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  border-radius: 10px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.card-image {
+  width: 100%;
+  height: 15rem;
+  object-fit: cover;
+}
+
+.card-name {
+  color: #222;
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 1.1rem;
+  margin-top: 0.5rem;
+}
+
+.card-about {
+  text-overflow: ellipsis;
+  width: 15rem;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border: none;
+  background: none;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.1);
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin: 0 1rem;
+  padding: 0.25rem 2rem;
+  transition: all 0.25s ease-in-out;
+  background: hsl(110, 21%, 93%);
+  color: hsl(141, 100%, 22%);
+  margin-bottom: 1rem;
+}
+
+.btn:focus,
+.btn:hover {
+  box-shadow: 1px 1px 2px rgba(21, 21, 21, 0.2);
+  background: hsl(111, 21%, 86%);
+}
+
+.about-container {
+  font-size: 1.25rem;
+  margin-top: 2rem;
+  text-align: justify;
+  text-justify: inter-word;
+}
 ```
 
 ---
@@ -555,80 +579,80 @@ def index():
 2. Configure the manifest.json to the PWA standard by inserting the JSON below and validating the JSON with [jsonlint](https://jsonlint.com/). The manifest.json sets the configuration for the installation and caching of the PWA.
 
 ```json
+{
+  "name": "VSCode Extension Catalogue",
+  "short_name": "vscodeextcat",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#fdfdfd",
+  "theme_color": "#14E6DD",
+  "orientation": "landscape-primary",
+  "icons": [
     {
-        "name": "VSCode Extension Catalogue",
-        "short_name": "vscodeextcat",
-        "start_url": "/",
-        "display": "standalone",
-        "background_color": "#fdfdfd",
-        "theme_color": "#14E6DD",
-        "orientation": "landscape-primary",
-        "icons": [
-        {
-            "src": "icons/icon-128x128.png",
-            "type": "image/png",
-            "sizes": "128x128",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/icon-128x128.png",
-            "type": "image/png",
-            "sizes": "128x128",
-            "purpose": "any"
-        },
-        {
-            "src": "icons/icon-192x192.png",
-            "type": "image/png",
-            "sizes": "192x192",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/icon-192x192.png",
-            "type": "image/png",
-            "sizes": "192x192",
-            "purpose": "any"
-        },
-        {
-            "src": "icons/icon-384x384.png",
-            "type": "image/png",
-            "sizes": "384x384",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/icon-384x384.png",
-            "type": "image/png",
-            "sizes": "384x384",
-            "purpose": "any"
-        },
-        {
-            "src": "icons/icon-512x512.png",
-            "type": "image/png",
-            "sizes": "512x512",
-            "purpose": "maskable"
-        },
-        {
-            "src": "icons/icon-512x512.png",
-            "type": "image/png",
-            "sizes": "512x512",
-            "purpose": "any"
-        }
-        ],
-    "screenshots" : [
-        {
-        "src": "icons/desktop_screenshot.png",
-        "sizes": "1920x1080",
-        "type": "image/png",
-        "label": ""
-        },
-        {
-        "src": "icons/mobile_screenshot.png",
-        "sizes": "1080x1920",
-        "type": "image/png",
-        "form_factor": "wide",
-        "label": ""
-        }
-    ]
+      "src": "icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-128x128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-384x384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icons/icon-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
     }
+  ],
+  "screenshots": [
+    {
+      "src": "icons/desktop_screenshot.png",
+      "sizes": "1920x1080",
+      "type": "image/png",
+      "label": ""
+    },
+    {
+      "src": "icons/mobile_screenshot.png",
+      "sizes": "1080x1920",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": ""
+    }
+  ]
+}
 ```
 
 ```bash
@@ -639,14 +663,14 @@ def index():
 2. Configure the app.js to initiate the servicework.js by inserting the JS. This ensures that when the window (app) loads the serviceworker.js is called to memory.
 
 ```js
-    if ("serviceWorker" in navigator) {
-        window.addEventListener("load", function () {
-        navigator.serviceWorker
-            .register("static/js/serviceWorker.js")
-            .then((res) => console.log("service worker registered"))
-            .catch((err) => console.log("service worker not registered", err));
-        });
-    }
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", function () {
+    navigator.serviceWorker
+      .register("static/js/serviceWorker.js")
+      .then((res) => console.log("service worker registered"))
+      .catch((err) => console.log("service worker not registered", err));
+  });
+}
 ```
 
 ```bash
@@ -658,92 +682,104 @@ def index():
 
 ```js
 const assets = [
-        "/",
-        "static/css/style.css",
-        "static/js/app.js",
-        "static/images/logo.png",
-        "static/images/favicon.jpg",
-        "static/icons/icon-128x128.png",
-        "static/icons/icon-192x192.png",
-        "static/icons/icon-384x384.png",
-        "static/icons/icon-512x512.png",
-        "static/icons/desktop_screenshot.png",
-        "static/icons/mobile_screenshot.png"
-    ];
+  "/",
+  "static/css/style.css",
+  "static/js/app.js",
+  "static/images/logo.png",
+  "static/images/favicon.jpg",
+  "static/icons/icon-128x128.png",
+  "static/icons/icon-192x192.png",
+  "static/icons/icon-384x384.png",
+  "static/icons/icon-512x512.png",
+  "static/icons/desktop_screenshot.png",
+  "static/icons/mobile_screenshot.png",
+];
 
-    const CATALOGUE_ASSETS = "catalogue-assets";
+const CATALOGUE_ASSETS = "catalogue-assets";
 
-    self.addEventListener("install", (installEvt) => {
-    installEvt.waitUntil(
-        caches
-        .open(CATALOGUE_ASSETS)
-        .then((cache) => {
-            console.log(cache)
-            cache.addAll(assets);
-        })
-        .then(self.skipWaiting())
-        .catch((e) => {
-            console.log(e);
-        })
-    );
-    });
+self.addEventListener("install", (installEvt) => {
+  installEvt.waitUntil(
+    caches
+      .open(CATALOGUE_ASSETS)
+      .then((cache) => {
+        console.log(cache);
+        cache.addAll(assets);
+      })
+      .then(self.skipWaiting())
+      .catch((e) => {
+        console.log(e);
+      })
+  );
+});
 
-    self.addEventListener("activate", function (evt) {
-    evt.waitUntil(
-        caches
-        .keys()
-        .then((keyList) => {
-            return Promise.all(
-            keyList.map((key) => {
-                if (key === CATALOGUE_ASSETS) {
-                console.log("Removed old cache from", key);
-                return caches.delete(key);
-                }
-            })
-            );
-        })
-        .then(() => self.clients.claim())
-    );
-    });
+self.addEventListener("activate", function (evt) {
+  evt.waitUntil(
+    caches
+      .keys()
+      .then((keyList) => {
+        return Promise.all(
+          keyList.map((key) => {
+            if (key === CATALOGUE_ASSETS) {
+              console.log("Removed old cache from", key);
+              return caches.delete(key);
+            }
+          })
+        );
+      })
+      .then(() => self.clients.claim())
+  );
+});
 
-    self.addEventListener("fetch", function (evt) {
-    evt.respondWith(
-        fetch(evt.request).catch(() => {
-        return caches.open(CATALOGUE_ASSETS).then((cache) => {
-            return cache.match(evt.request);
-        });
-        })
-    );
+self.addEventListener("fetch", function (evt) {
+  evt.respondWith(
+    fetch(evt.request).catch(() => {
+      return caches.open(CATALOGUE_ASSETS).then((cache) => {
+        return cache.match(evt.request);
+      });
     })
+  );
+});
 ```
 
 ---
 
 ### Validate your PWA
+
 Validation is important to ensure the app is compliant with [W3 web standards](https://www.w3.org/standards/).
+
 1. Open your website in Chrome, open developer tools (F12), and run a Lighthouse report.
-![Screen cpature of Chrome Lighthouse report](/docs/README_resources/Chrome_Lighthouse_Report.png "Click F12 and choose Lighthouse on the top menu of your developer tools").
-2. Open your website in Edge, open developer tools (F12), and look at the application report.
-![Screen cpature of Chrome Lighthouse report](/docs/README_resources/Edge_Application_Report.png "Click F12 and choose Lighthouse on the top menu of your developer tools").
+
+![Screen cpature of Chrome Lighthouse report](/docs/README_resources/Chrome_Lighthouse_Report.png "Click F12 and choose Lighthouse on the top menu of your developer tools")
+
+. 2. Open your website in Edge, open developer tools (F12), and look at the application report.
+
+![Screen cpature of Chrome Lighthouse report](/docs/README_resources/Edge_Application_Report.png "Click F12 and choose Lighthouse on the top menu of your developer tools")
+
+.
 
 ---
 
 ### Take your app further
+
 The following code snippets will help you create a simple form on the add.html page. This form allows people to add their details to an email database for updates on your catalogue. Less explicit instructions have been provided; students are encouraged to practice their BASH, SQL Flask, and HTML to bring it all together. The screenshot below shows what the page should look like, and when users submit, the database is updated.
 
-![Screen capture of the finished PWA](/docs/README_resources/form_example.png "This is what your application will look like").
+![Screen capture of the finished PWA](/docs/README_resources/form_example.png "This is what your application will look like")
+
+.
 
 1. Page specifications:
-    - Simple form where the user inserts their name and email address
-    - When they click submit, the database is updated
-    - The input form must be styled to be consistent with the rest of the website
-    - A message confirming submission is returned to the user
-3. SQL schema specifications:
-    - A new table called contact_list
-    - 3 columns
-      - id is the primary key and should increment automatically
-      - email must be unique
-      - name
+   - Simple form where the user inserts their name and email address
+   - When they click submit, the database is updated
+   - The input form must be styled to be consistent with the rest of the website
+   - A message confirming submission is returned to the user
+2. SQL schema specifications:
+
+   - A new table called contact_list
+   - 3 columns
+
+     - id is the primary key and should increment automatically
+     - email must be unique
+     - name
 
 ```python
     def insertContact(email,name):
@@ -770,34 +806,36 @@ The following code snippets will help you create a simple form on the add.html p
 ```
 
 ```html
-    {% if is_done %}
-        <--DO THIS-->
-    {% else %}
-        <--DO THIS-->
-    {% endif %}
+{% if is_done %} <--DO THIS--> {% else %} <--DO THIS--> {% endif %}
 ```
 
 ```html
-    <form action="/app.html" method="POST" class="box">
-      <div>
-        <label class="form-label">Email address</label>
-        <input name="email" type="email" class="form-control" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$" placeholder="name@example.com">
-      </div>
-      <div>
-        <label class="form-label">Name</label>
-        <textarea class="form-control" name="text" id="name" rows="1"></textarea>
-      </div>
-      <br/>
-      <div>
-        <button type="submit" class="btn">Submit</button>
-      </div>
-    </form>
+<form action="/app.html" method="POST" class="box">
+  <div>
+    <label class="form-label">Email address</label>
+    <input
+      name="email"
+      type="email"
+      class="form-control"
+      id="email"
+      pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2, 4}$"
+      placeholder="name@example.com"
+    />
+  </div>
+  <div>
+    <label class="form-label">Name</label>
+    <textarea class="form-control" name="text" id="name" rows="1"></textarea>
+  </div>
+  <br />
+  <div>
+    <button type="submit" class="btn">Submit</button>
+  </div>
+</form>
 ```
 
 ```css
-    .form-control {
-
-    }
+.form-control {
+}
 ```
 
-<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Source">Flask PWA Programming For The Web Task Source</a> and <a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template">Flask PWA Programming For The Web Task Template</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/benpaddlejones">Ben Jones</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block;">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!important;margin-left:3px;vertical-align:text-bottom;" src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
+<p xmlns:cc="http://creativecommons.org/ns#" xmlns:dct="http://purl.org/dc/terms/"><a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Source">Flask PWA Programming For The Web Task Source</a> and <a property="dct:title" rel="cc:attributionURL" href="https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template">Flask PWA Programming For The Web Task Template</a> by <a rel="cc:attributionURL dct:creator" property="cc:attributionName" href="https://github.com/benpaddlejones">Ben Jones</a> is licensed under <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/?ref=chooser-v1" target="_blank" rel="license noopener noreferrer" style="display:inline-block; ">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International<img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1" alt=""><img style="height:22px!important; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1" alt=""><img style="height:22px!imant; margin-left:3px; vertical-align:text-bottom; " src="https://mirrors.creativecommons.org/presskit/icons/sa.svg?ref=chooser-v1" alt=""></a></p>
