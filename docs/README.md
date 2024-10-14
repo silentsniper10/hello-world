@@ -673,10 +673,10 @@ code app.js
 2. Configure the app.js to initiate the servicework.js by inserting the JS. This ensures that when the window (app) loads the serviceworker.js is called to memory.
 
 ```js
-if ("serviceWorker" in navigator) {
+if ("serviceworker" in navigator) {
   window.addEventListener("load", function () {
-    navigator.serviceWorker
-      .register("static/js/serviceWorker.js")
+    navigator.serviceworker
+      .register("static/js/serviceworker.js")
       .then((res) => console.log("service worker registered"))
       .catch((err) => console.log("service worker not registered", err));
   });
