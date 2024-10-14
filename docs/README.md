@@ -60,7 +60,7 @@ This screen capture shows how the final PWA will be rendered to the user.
 | ------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------ |
 | [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf)           | [ms-python.flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)                     |
 | [McCarter.start-git-bash](https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash) | [ms-python.black-formatter](https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter)\* |
-| [alexcvzz.vscode-sqlite](https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite)   | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)                     |
+| [yy0931.vscode-sqlite3-editor](https://marketplace.visualstudio.com/items?itemName=yy0931.vscode-sqlite3-editor)  | [ms-python.python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)                     |
 |                                                                                                        | [oderwat.indent-rainbow](https://marketplace.visualstudio.com/items?itemName=oderwat.indent-rainbow)         |
 |                                                                                                        | [esbenp.prettier-vscode](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)\*       |
 
@@ -182,16 +182,20 @@ code my_queries.sql
 > - Favourite books
 > - etc
 
-1. Run SQL queries to set up your database table. When asked, choose the database.db.
+1. To run SQLite3 SQL queries in VSCode
+Open the DB file, then choose "Query Editor" from the top menu.
 
-> [!CAUTION]
-> The Sqlite3 parser in VSCode does not like the HTMLsafe `"` characters used in \*.md. If you copy and paste the SQL strings below, you will need to replace **all** the `"` characters
+```bash
+code data_source.db
+```
+
+![Screen capture of query editor](/docs/README_resources/query_editor.png "Choose Query Editor from the top menu")
 
 ```sql
 CREATE TABLE extension(extID INTEGER NOT NULL PRIMARY KEY,name TEXT NOT NULL, hyperlink TEXT NOT NULL,about TEXT NOT NULL,image TEXT NOT NULL,language TEXT NOT NULL);
 ```
 
-2. After running each query, put `--` in front of the query to turn it into a comment so it doesn't run again, causing an error.
+2. After running each query put `--` infront of the query to turn it into a comment so it doesn't run again and error.
 3. Run SQL queries to populate your table.
 
 ```sql
