@@ -225,7 +225,7 @@ SELECT * FROM extension WHERE language LIKE '#BASH';
 
 ### Make your graphic assets
 
-1. Use Photoshop or [Canva](https://www.canva.com/en_au/signup/?signupRedirect=%2Fedu-signup&loginRedirect=%2Fedu-signup&brandingVariant=edu) to design a simple square logo 1080px X 1080px named logo.png. Save all working files into the .workingdocuments directory.
+1. Use Photoshop or [Canva](https://www.canva.com/en_au/signup/?signupRedirect=%2Fedu-signup&loginRedirect=%2Fedu-signup&brandingVariant=edu) to design a simple square logo 1080px X 1080px named logo.png. Save all working files (*.psd, pre-optimised originals, etc) into the .workingdocuments directory.
 2. Design simplified app icon 512px X 512px names favicon.png.
 3. Web optimise the images using [TinyPNG](https://tinypng.com/).
 4. Save the files into the static/images folder.
@@ -234,7 +234,11 @@ SELECT * FROM extension WHERE language LIKE '#BASH';
    - icon-192x192.png
    - icon-384x384.png
    - icon-512x512.png
-6. Web optimise the images using [TinyPNG](https://tinypng.com/) and save them into the static/icons.
+6. Web optimise the images using [TinyPNG](https://tinypng.com/)
+7. Save the optimised icons to static/icons
+8. Save the optimised logo and favicon to static/images
+
+
 
 > [!NOTE]
 > Graphic design is not the focus of this course. You should not spend excessive time designing logos and icons.
@@ -663,7 +667,7 @@ code manifest.json
 
 ```bash
 cd js
-code ap.js
+code app.js
 ```
 
 2. Configure the app.js to initiate the servicework.js by inserting the JS. This ensures that when the window (app) loads the serviceworker.js is called to memory.
