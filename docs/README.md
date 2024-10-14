@@ -78,8 +78,8 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
    - Choose your working directory
 
 ```bash
-       git clone https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template.git
-       cd Flask_PWA_Programming_For_The_Web_Task_Template
+git clone https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template.git
+cd Flask_PWA_Programming_For_The_Web_Task_Template
 ```
 
 > [!TIP]
@@ -88,8 +88,8 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
 4. Install necessary dependencies.
 
 ```bash
-    pip install sqlite
-    pip install flask
+pip install sqlite
+pip install flask
 ````
 
 ---
@@ -99,62 +99,62 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
 1. Files or folders that start with a dot (`\.*` or `.*.*`) can't be served by the web server. This adds a layer of security for assets that you do not want to be public.
 
 ```bash
-    mkdir .workingDocuments
+mkdir .workingDocuments
 ```
 
 2. Create a license file.
 
 ```bash
-    touch LICENSE
-    code LICENSE
+touch LICENSE
+code LICENSE
 ```
 
 Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into the file. GNU GPL is a free software license, or copyleft license, that guarantees end users the freedom to run, study, share, and modify the software. 3. Create your directory structure and some base files using BASH scripts reading text files.
 
 ```text
-    ├── .database
-    ├── .workingdocuments
-    ├── static
-    │   ├── css
-    │   ├── icons
-    │   ├── images
-    │   ├── js
-    ├── templates
-    ├── LICENSE
-    ├── main.py
-    └── database_manager.py
+├── .database
+├── .workingdocuments
+├── static
+│   ├── css
+│   ├── icons
+│   ├── images
+│   ├── js
+├── templates
+├── LICENSE
+├── main.py
+└── database_manager.py
 ```
 
 3. Populate a text file with a list of folders you need at the root of your project.
 
 ```bash
-    touch folders.txt
-    code folder.txt
+touch folders.txt
+code folder.txt
 ```
 
 4. Run a BASH script to read the text file and create the folders listed in it.
 
 ```bash
-    while read -r line; do
-    echo $line
-    mkdir -p $line
-    done < folders.txt
+while read -r line; do
+echo $line
+mkdir -p $line
+done < folders.txt
 ```
 
 5. Populate the file with a list of files you need at the root of your project.
 
 ```bash
-    touch files.txt
-    code files.txt
+touch files.txt
+code files.txt
 ```
 
 6. Run a BASH script to read the text file and create the files listed in it.
 
 ```bash
-    while read -r line; do
-    echo $line
-    touch -p $line
-    done < files.txt\
+while read -r line; do
+echo $line
+touch -p $line
+done < files.txt\
 ```
 
 > [!IMPORTANT]
@@ -167,10 +167,10 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 ### Setup your SQLite3 Database
 
 ```bash
-    cd .database
-    touch data_source.db
-    touch my_queries.sql
-    code my_queries.sql
+cd .database
+touch data_source.db
+touch my_queries.sql
+code my_queries.sql
 ```
 
 > [!NOTE]
@@ -185,33 +185,33 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 1. Run SQL queries to set up your database table. When asked, choose the database.db.
 
 ```sql
-    CREATE TABLE extension(extID INTEGER NOT NULL PRIMARY KEY,name TEXT NOT NULL, hyperlink TEXT NOT NULL,about TEXT NOT NULL,image TEXT NOT NULL,language TEXT NOT NULL);
+CREATE TABLE extension(extID INTEGER NOT NULL PRIMARY KEY,name TEXT NOT NULL, hyperlink TEXT NOT NULL,about TEXT NOT NULL,image TEXT NOT NULL,language TEXT NOT NULL);
 ```
 
 2. After running each query, put `--` in front of the query to turn it into a comment so it doesn't run again, causing an error.
 3. Run SQL queries to populate your table.
 
-```sql
-    INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (1,`Live Server`,`https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer`,`Launch a development local Server with live reload feature for static & dynamic pages`,`https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default`,`HTML CSS JS`);
+```text
+INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (1,"Live Server","https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer","Launch a development local Server with live reload feature for static & dynamic pages","https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default","HTML CSS JS");
 ```
 
 ```sql
-    INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (2,'VSCode-SQLite','https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite','Explore and query SQLite databases.','https://alexcvzz.gallerycdn.vsassets.io/extensions/alexcvzz/vscode-sqlite/0.14.1/1654359416316/Microsoft.VisualStudio.Services.Icons.Default','SQL');
+INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (2,"VSCode-SQLite","https://marketplace.visualstudio.com/items?itemName=alexcvzz.vscode-sqlite","Explore and query SQLite databases.","https://alexcvzz.gallerycdn.vsassets.io/extensions/alexcvzz/vscode-sqlite/0.14.1/1654359416316/Microsoft.VisualStudio.Services.Icons.Default","SQL");
 ```
 
 ```sql
-    INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (3,'Render CR LF','https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf','Displays the line ending symbol and optionally extra whitespace when "Render whitespace" is turned on.','https://medo64.gallerycdn.vsassets.io/extensions/medo64/render-crlf/1.7.1/1689315206970/Microsoft.VisualStudio.Services.Icons.Default','#BASH');
+INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (3,"Render CR LF","https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf","Displays the line ending symbol and optionally extra whitespace when 'Render whitespace' is turned on.","https://medo64.gallerycdn.vsassets.io/extensions/medo64/render-crlf/1.7.1/1689315206970/Microsoft.VisualStudio.Services.Icons.Default","#BASH");
 ```
 
 ```sql
-    INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (4,'Start GIT BASH','https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash','Adds a bash command to VSCode that allows you to start git-bash in the current workspace's root folder.','https://mccarter.gallerycdn.vsassets.io/extensions/mccarter/start-git-bash/1.2.1/1499505567572/Microsoft.VisualStudio.Services.Icons.Default','#BASH');
+INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (4,"Start GIT BASH","https://marketplace.visualstudio.com/items?itemName=McCarter.start-git-bash","Adds a bash command to VSCode that allows you to start git-bash in the current workspace's root folder.","https://mccarter.gallerycdn.vsassets.io/extensions/mccarter/start-git-bash/1.2.1/1499505567572/Microsoft.VisualStudio.Services.Icons.Default","#BASH");
 ```
 
 4. Run some SQL queries to test your database.
 
 ```sql
-    SELECT * FROM extension;
-    SELECT * FROM extension WHERE language LIKE '#BASH';
+SELECT * FROM extension;
+SELECT * FROM extension WHERE language LIKE '#BASH';
 ```
 
 ---
@@ -240,9 +240,9 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 > Adjust titles, headings and content to match your concept.
 
 ```bash
-    cd ../templates
-    touch layout.html
-    code layout.html
+cd ../templates
+touch layout.html
+code layout.html
 ```
 
 1. Insert the basic HTML structure in your templates/layout.html file.
@@ -273,8 +273,8 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 6. Insert the block content into index.html, you will add more later.
 
 ```bash
-    touch index.html
-    code index.html
+touch index.html
+code index.html
 ```
 
 ```html
@@ -288,9 +288,9 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 ### Style the HTML core
 
 ```bash
-    cd ../static/css
-    touch style.css
-    code style.css
+cd ../static/css
+touch style.css
+code style.css
 ```
 
 1. Insert the css code into static/css/style.css.
@@ -323,11 +323,11 @@ main {
 ### Make and style the menu
 
 ```bash
-    cd ../..templates
-    mkdir partials
-    cd partials
-    touch menu.html
-    code menu.html
+cd ../..templates
+mkdir partials
+cd partials
+touch menu.html
+code menu.html
 ```
 
 1. Insert the menu HTML into menu.html.
@@ -345,8 +345,8 @@ main {
 ```
 
 ```bash
-    `cd ../../static/css`
-    `code style.css`
+`cd ../../static/css`
+`code style.css`
 ```
 
 2. Style the menu by inserting this below your existing CSS in static/css/style.css.
@@ -392,33 +392,33 @@ nav h1 {
 ### Render your website
 
 ```bash
-    cd ../..
-    code main.py
+cd ../..
+code main.py
 ```
 
 1. Insert the Flask python to the backend script.
 
 ```python
-    from flask import Flask
-    from flask import render_template
-    from flask import request
-    import database_manager as dbHandler
+from flask import Flask
+from flask import render_template
+from flask import request
+import database_manager as dbHandler
 
-    app = Flask(__name__)
+app = Flask(__name__)
 
-    @app.route('/index.html', methods=['GET'])
-    @app.route('/', methods=['POST', 'GET'])
-    def index():
-        return render_template('/index.html')
+@app.route('/index.html', methods=['GET'])
+@app.route('/', methods=['POST', 'GET'])
+def index():
+  return render_template('/index.html')
 
-    if __name__ == '__main__':
-        app.run(debug=True, host='0.0.0.0', port=5000)
+if __name__ == '__main__':
+  app.run(debug=True, host='0.0.0.0', port=5000)
 ```
 
 2. Run the builtin webserver.
 
 ```bash
-    python main.py
+python main.py
 ```
 
 3. Visit your website and look at the source in developer tools to see how the page has been rendered.
@@ -431,37 +431,37 @@ nav h1 {
 ### Query your SQL database and migrate the content to the frontend as HTML
 
 ```bash
-    code database_manager.py
+code database_manager.py
 ```
 
 1. Query the database and store the data in a variable.
 
 ```python
-    import sqlite3 as sql
+import sqlite3 as sql
 
-    def listExtension():
-        con = sql.connect("databaseFiles/database.db")
-        cur = con.cursor()
-        data = cur.execute('SELECT * FROM extension').fetchall()
-        con.close()
-        return data
+def listExtension():
+  con = sql.connect("databaseFiles/database.db")
+  cur = con.cursor()
+  data = cur.execute('SELECT * FROM extension').fetchall()
+  con.close()
+  return data
 ```
 
 ```bash
-    code main.py
+code main.py
 ```
 
 2. Pass the data to the front end by modifying the existing `app.route`.
 
 ```python
 def index():
-     data = dbhandler.listExtension()
-     return render_template('/index.html', content=data)
+   data = dbhandler.listExtension()
+   return render_template('/index.html', content=data)
 ```
 
 ```bash
-    cd templates
-    code index.html
+cd templates
+code index.html
 ```
 
 3. Use Janga2 to pass the data (which is a [tuple](https://www.w3schools.com/python/python_tuples.asp)) to front end content. Insert the HTML inside the `<div class="container">` of the index.html.
@@ -484,8 +484,8 @@ def index():
 ```
 
 ```bash
-    cd ../static/css
-    code style.css
+cd ../static/css
+code style.css
 ```
 
 4. Style the cards by inserting this below your existing CSS in static/css/style.css.
@@ -571,8 +571,8 @@ def index():
 1. Take a screen shot of the website. Then size the image to 1080px X 1920px, web optimise the images using [TinyPNG](https://tinypng.com/) and save it to static/icons.
 
 ```bash
-    cd ..
-    code manifest.json
+cd ..
+code manifest.json
 ```
 
 2. Configure the manifest.json to the PWA standard by inserting the JSON below and validating the JSON with [jsonlint](https://jsonlint.com/). The manifest.json sets the configuration for the installation and caching of the PWA.
@@ -655,8 +655,8 @@ def index():
 ```
 
 ```bash
-    cd js
-    code ap.js
+cd js
+code ap.js
 ```
 
 2. Configure the app.js to initiate the servicework.js by inserting the JS. This ensures that when the window (app) loads the serviceworker.js is called to memory.
@@ -673,8 +673,8 @@ if ("serviceWorker" in navigator) {
 ```
 
 ```bash
-    cd js
-    code serviceworker.js
+cd js
+code serviceworker.js
 ```
 
 1. Configure the serviceworker.js by inserting the JS. The serviceworker.js, as the name suggests, is the file that does all the work in a PWA, including caching and API integration for the [WEB APIs](https://developer.mozilla.org/en-US/docs/Web/API).
@@ -781,27 +781,27 @@ The following code snippets will help you create a simple form on the add.html p
      - name
 
 ```python
-    def insertContact(email,name):
-        con = sql.connect(".database/data_source.db")
-        cur = con.cursor()
-        cur.execute("INSERT INTO contact_list (email,name) VALUES (?,?)", (email,name))
-        con.commit()
-        con.close()
+def insertContact(email,name):
+  con = sql.connect(".database/data_source.db")
+  cur = con.cursor()
+  cur.execute("INSERT INTO contact_list (email,name) VALUES (?,?)", (email,name))
+  con.commit()
+  con.close()
 ```
 
 > [!NOTE]
 > You will need to catch the expectation of a duplicate email
 
 ```python
-    @app.route('/add.html', methods=['POST', 'GET'])
-    def add():
-        if request.method=='POST':
-            email = request.form['email']
-            name = request.form['name']
-            dbHandler.insertContact(email,name)
-            return render_template('/add.html', is_done=True")
-        else:
-            return render_template('/add.html')
+@app.route('/add.html', methods=['POST', 'GET'])
+def add():
+   if request.method=='POST':
+      email = request.form['email']
+      name = request.form['name']
+      dbHandler.insertContact(email,name)
+      return render_template('/add.html', is_done=True")
+   else:
+      return render_template('/add.html')
 ```
 
 ```html
