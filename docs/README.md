@@ -443,7 +443,7 @@ code database_manager.py
 import sqlite3 as sql
 
 def listExtension():
-  con = sql.connect("databaseFiles/database.db")
+  con = sql.connect(".database/database.db")
   cur = con.cursor()
   data = cur.execute('SELECT * FROM extension').fetchall()
   con.close()
@@ -458,7 +458,7 @@ code main.py
 
 ```python
 def index():
-   data = dbhandler.listExtension()
+   data = dbHandler.listExtension()
    return render_template('/index.html', content=data)
 ```
 
