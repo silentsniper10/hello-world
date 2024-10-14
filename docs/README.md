@@ -77,7 +77,7 @@ Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> a
    - Open a new window in VSCode
    - Choose your working directory
 
-````bash
+```bash
        git clone https://github.com/TempeHS/Flask_PWA_Programming_For_The_Web_Task_Template.git
        cd Flask_PWA_Programming_For_The_Web_Task_Template
 ```
