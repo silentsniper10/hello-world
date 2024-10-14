@@ -185,7 +185,7 @@ code my_queries.sql
 1. Run SQL queries to set up your database table. When asked, choose the database.db.
 
 > [!CAUTION]
-> The Sqlite3 parser in VSCode does not like the HTMLsafe `"` characters used in *.md. If you copy and paste the SQL strings below, you will need to replace *all* the `"` characters
+> The Sqlite3 parser in VSCode does not like the HTMLsafe `"` characters used in *.md. If you copy and paste the SQL strings below, you will need to replace **all** the `"` characters
 
 ```sql
 CREATE TABLE extension(extID INTEGER NOT NULL PRIMARY KEY,name TEXT NOT NULL, hyperlink TEXT NOT NULL,about TEXT NOT NULL,image TEXT NOT NULL,language TEXT NOT NULL);
