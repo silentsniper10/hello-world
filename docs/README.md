@@ -192,7 +192,7 @@ Copy the [GNU GPL license](https://www.gnu.org/licenses/gpl-3.0.txt) text into t
 3. Run SQL queries to populate your table.
 
 ```sql
-    INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (1,\"Live Server\",'https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer','Launch a development local Server with live reload feature for static & dynamic pages','https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default','HTML CSS JS');
+    INSERT INTO extension(extID,name,hyperlink,about,image,language) VALUES (1,/"Live Server/",'https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer','Launch a development local Server with live reload feature for static & dynamic pages','https://ritwickdey.gallerycdn.vsassets.io/extensions/ritwickdey/liveserver/5.7.9/1661914858952/Microsoft.VisualStudio.Services.Icons.Default','HTML CSS JS');
 ```
 
 ```sql
