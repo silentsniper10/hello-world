@@ -694,7 +694,7 @@ const assets = [
   "static/css/style.css",
   "static/js/app.js",
   "static/images/logo.png",
-  "static/images/favicon.jpg",
+  "static/images/favicon.png",
   "static/icons/icon-128x128.png",
   "static/icons/icon-192x192.png",
   "static/icons/icon-384x384.png",
