@@ -35,7 +35,8 @@ This screen capture shows how the final PWA will be rendered to the user.
 ## Requirements
 
 1. VSCode
-1. Python 3.x
+2. Python 3.x
+3. GIT for windows 2.x.x +
 
 ## Prior learning
 
