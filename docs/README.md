@@ -67,7 +67,7 @@ This screen capture shows how the final PWA will be rendered to the user.
 
 _\*You will need to configure your formatters, it is recommended esbenp.prettier-vscode is your default formatter and ms-python.black-formatter is the Python language formatter_
 
-> [!IMPORTANT]
+> [!Important]
 > From now on, you should aim to run all commands from the CLI. You are discouraged from left/right clicking the GUI. You will find it feels slow at first, but through disciplined use, you will become much quicker and more accurate with CLI commands than GUI controls.
 
 Make sure you open a new terminal with the keys <kbd>Ctrl</kbd> + <kbd>`</kbd> and choose Git Bash from the menu option in the top right of the terminal shell.
@@ -158,7 +158,7 @@ touch -p $line
 done < files.txt\
 ```
 
-> [!IMPORTANT]
+> [!Important]
 >
 > - The last list item needs a line ending, so make sure there is a blank last line in the file.
 > - You will find that all file and folder names have an unwanted `space` character at the end. This is because you are using a BASH emulator on the Windows operating system. Bash is a Unix language that uses [LF Unicode character 000A while Windows uses CRLF Unicode characters 000D + 000A](https://learn.microsoft.com/en-us/visualstudio/ide/encodings-and-line-breaks?view=vs-2022). Because you have installed the [medo64.render-crlf](https://marketplace.visualstudio.com/items?itemName=medo64.render-crlf) extension, click on `CRLF` in the bottom bar of VSCode and choose `LF` to change the line ending before running your BASH script.
