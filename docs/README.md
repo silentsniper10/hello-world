@@ -52,7 +52,7 @@ This screen capture shows how the final PWA will be rendered to the user.
 
 ![Screen recording of setting up VSCode](/docs/README_resources/get_vscode_started.gif "Follow these steps to setup VSCode")
 
-> [!NOTE]
+> [!Note]
 > Helpful VSCode settings are configured in [.vscode/settings.json](/.vscode/settings.json) which will automatically apply if you are not using a custom profile. If you are using a custom profile, it is suggested you manually apply those settings to your profile, especially the \*.md file association, so the README.md default opens in preview mode and setting _bash_ as your default terminal.
 
 1. Install the necessary extensions for this tutorial.
@@ -174,7 +174,7 @@ touch my_queries.sql
 code my_queries.sql
 ```
 
-> [!NOTE]
+> [!Note]
 > The following SQL queries are provided as an example only. Students are encouraged to select their content and design a database schema for it; ideas include:
 >
 > - Favourite bands
@@ -226,7 +226,7 @@ SELECT * FROM extension WHERE language LIKE '#BASH';
 
 ### Make your graphic assets
 
-> [!NOTE]
+> [!Note]
 > Graphic design is not the focus of this course. It is suggested that you do not spend excessive time designing logos and icons.
 
 1. Use Photoshop or [Canva](https://www.canva.com/en_au/signup/?signupRedirect=%2Fedu-signup&loginRedirect=%2Fedu-signup&brandingVariant=edu) to design a simple square logo 1080px X 1080px named logo.png. Save all working files (*.psd, pre-optimised originals, etc) into the .workingdocuments directory.
@@ -246,7 +246,7 @@ SELECT * FROM extension WHERE language LIKE '#BASH';
 
 ### Setup your index.html using the Jinga2 template system
 
-> [!NOTE]
+> [!Note]
 > Adjust titles, headings and content to match your concept.
 
 ```bash
@@ -433,7 +433,7 @@ python main.py
 
 3. Visit your website and look at the source in developer tools to see how the page has been rendered.
 
-> [!NOTE]
+> [!Note]
 > To explain how Jinga2 works in this example when index.html is called, the render will start with layout.html with the code from partials/menu.html inserted where `{% include "partials/menu.html" %}` is and the index.html content that is between the `{% block content %}` and `{% endblock %}` will be inserted in the same tags in the layout.html.
 
 ---
@@ -799,7 +799,7 @@ def insertContact(email,name):
   con.close()
 ```
 
-> [!NOTE]
+> [!Note]
 > You will need to catch the expectation of a duplicate email
 
 ```python
