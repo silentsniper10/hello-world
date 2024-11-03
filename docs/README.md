@@ -34,9 +34,16 @@ This screen capture shows how the final PWA will be rendered to the user.
 
 ## Requirements
 
-1. VSCode
-2. Python 3.x
-3. GIT for windows 2.x.x +
+1. [VSCode](https://code.visualstudio.com/download)
+2. [Python 3.x](https://www.python.org/downloads/)
+3. [GIT 2.x.x +](https://git-scm.com/downloads)
+
+> [!Important]
+> MacOS users may have a `pip3` soft link instead of `pip`, run the below commands to see what path your system is configured with and use that command through the project.
+> ```bash
+> pip show pip
+> pip3 show pip
+> ```
 
 ## Prior learning
 
