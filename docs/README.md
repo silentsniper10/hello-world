@@ -96,7 +96,6 @@ cd Flask_PWA_Programming_For_The_Web_Task_Template
 4. Install necessary dependencies.
 
 ```bash
-pip install sqlite
 pip install flask
 ```
 
