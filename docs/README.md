@@ -104,7 +104,7 @@ pip install flask
 
 ### Create files and folders for your Flask Project
 
-1. Make folder for all your working documents like photoshop *.psd files, developer documentation etc.
+1. Make a folder for all your working documents like photoshop *.psd files, developer documentation etc.
 
 ```bash
 mkdir working_documents
