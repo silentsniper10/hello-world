@@ -1,0 +1,22 @@
+{
+  "recommendations": [
+    "McCarter.start-git-bash",
+    "yy0931.vscode-sqlite3-editor",
+    "medo64.render-crlf",
+    "ecmel.vscode-html-css",
+    "ms-python.python",
+    "esbenp.prettier-vscode",
+    "oderwat.indent-rainbow",
+    "ritwickdey.LiveServer",
+    "tomoki1207.pdf",
+    "ms-vscode-remote.remote-containers",
+    "ms-vscode-remote.remote-wsl",
+    "GitHub.codespaces",
+    "ms-python.debugpy",
+    "ms-python.vscode-pylance",
+    "ms-vscode-remote.remote-wsl",
+    "ms-azuretools.vscode-docker",
+    "saeris.markdown-github-alerts",
+    "bierner.markdown-preview-github-styles"
+  ]
+}
