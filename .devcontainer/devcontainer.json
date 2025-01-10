@@ -48,7 +48,7 @@
         "bierner.markdown-preview-github-styles",
         "mechatroner.rainbow-csv",
         "ms-python.pylint",
-        "donjayamanne.python-environment-manager"
+        "ms-python.vscode-python-envs"
       ]
     }
   },
