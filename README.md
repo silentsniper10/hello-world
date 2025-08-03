@@ -8,3 +8,5 @@ My web application social network will be a platform where people are able to lo
 ## Non-functional:
 - The website should run smoothly 
 - The website should be able to switch between the homepage and the form page smoothly 
+# First wireframe sketch
+![wireframe sketch](IMG_8323.jpg)
