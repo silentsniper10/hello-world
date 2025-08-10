@@ -10,3 +10,7 @@ My web application social network will be a platform where people are able to lo
 - The website should be able to switch between the homepage and the form page smoothly 
 # First wireframe sketch
 ![wireframe sketch](IMG-8323.jpg)
+# Alternate wireframe design
+![alt wireframe homepage](IMG-1.png)
+![alt wireframe item listing](IMG-2.png)
+![alt wireframe checkout page](IMG-3.png)
