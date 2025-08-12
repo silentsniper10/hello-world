@@ -4,8 +4,8 @@ My web application social network will be a platform where people are able to se
 ## Functional:
 - User should be able to browse through a few items and look at the detail of them
 - User should be able to look at specific details about the listing of an item
-- User should be able to
 - User should be able to log in with their username and password
+- User should be able to add things to their bag and be shown it on the checkout page
 ## Non-functional:
 - The website should run smoothly overall
 - The website should be able to switch between the each page quickly
