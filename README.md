@@ -18,7 +18,7 @@ My web application social network will be a platform where people are able to se
 ![alt wireframe checkout page](IMG-3.png)
 # Designing Algorithms
 ## Algorithm design
-![alt algorithm design](IMG-4.png)
+![alt algorithm design](IMG-5.png)
 ## Test cases 
 | Test Case Scenario              | Test Steps                                                                 | Expected Result                                                                                      | Actual Result |
 |---------------------------------|----------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|---------------|
