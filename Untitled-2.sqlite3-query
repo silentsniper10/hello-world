@@ -1,0 +1,6 @@
+-- database: ../../../path/to/database.db
+SELECT * FROM MOCK_DATA;
+-- database: /Users/christophersakal/Flask_PWA_Programming_For_The_Web_Task_Template/database/data_source.db
+
+SELECT * FROM MOCK_DATA;
+

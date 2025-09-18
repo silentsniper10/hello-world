@@ -1,0 +1,97 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="container">
+   
+</div>
+
+<!-- Listings Section -->
+<div class="listings">
+    <h3 class="section-title">Looking for something?</h3>
+    <div class="listing-grid>
+        <!-- Listing card 1 -->
+        <div class="listing-card">
+            <div class="listing-image">Listing image</div>
+            <div class="listing-info">
+                <p><strong>Essential listing info</strong></p>
+                <p>title | $</p>
+                <p>new | used</p>
+            </div>
+        </div>
+        <!-- Listing card 2 -->
+        <div class="listing-card">
+            <div class="listing-image">Listing image</div>
+            <div class="listing-info">
+                <p><strong>Essential listing info</strong></p>
+                <p>title | $</p>
+                <p>new | used</p>
+            </div>
+        </div>
+        <!-- Listing card 3 -->
+        <div class="listing-card">
+            <div class="listing-image">Listing image</div>
+            <div class="listing-info">
+                <p><strong>Essential listing info</strong></p>
+                <p>title | $</p>
+                <p>new | used</p>
+            </div>
+        </div>
+        <!-- Listing card 4 -->
+        <div class="listing-card">
+            <div class="listing-image">Listing image</div>
+            <div class="listing-info">
+                <p><strong>Essential listing info</strong></p>
+                <p>title | $</p>
+                <p>new | used</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .listings {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .section-title {
+
+        background: #1E90FF;
+        color: black;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 25px;
+        display: inline-block;
+        margin-bottom: 20px;
+    }
+
+    .listing-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .listing-card {
+        width: 220px;
+        text-align: left;
+    }
+
+    .listing-image {
+        width: 100%;
+        height: 150px;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #666;
+        font-size: 14px;
+    }
+
+    .listing-info {
+        margin-top: 10px;
+        font-size: 14px;
+    }
+</style>
+{% endblock %}
+
