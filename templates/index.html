@@ -1,48 +1,50 @@
 {% extends 'layout.html' %}
 
 {% block content %}
-<div class="container">
-   
-</div>
+<div class="container"></div>
 
 <!-- Listings Section -->
 <div class="listings">
     <h3 class="section-title">Looking for something?</h3>
-    <div class="listing-grid>
+    <div class="listing-grid">
         <!-- Listing card 1 -->
         <div class="listing-card">
-            <div class="listing-image">Listing image</div>
+            <div class="listing-image">
+                <img src="static\images\IMG-11.jpg" alt="Lawnmower">
+            </div>
             <div class="listing-info">
-                <p><strong>Essential listing info</strong></p>
-                <p>title | $</p>
-                <p>new | used</p>
+                <p><strong>Lawnmower</strong></p>
+                <p>$300</p>
             </div>
         </div>
         <!-- Listing card 2 -->
         <div class="listing-card">
-            <div class="listing-image">Listing image</div>
+            <div class="listing-image">
+                <img src="static\images\IMG-12.jpg" alt="Electric Hand Drill">
+            </div>
             <div class="listing-info">
-                <p><strong>Essential listing info</strong></p>
-                <p>title | $</p>
-                <p>new | used</p>
+                <p><strong>Electric Hand Drill</strong></p>
+                <p>$50</p>
             </div>
         </div>
         <!-- Listing card 3 -->
         <div class="listing-card">
-            <div class="listing-image">Listing image</div>
+            <div class="listing-image">
+                <img src="static\images\IMG-13.webp" alt="Iron Hammer">
+            </div>
             <div class="listing-info">
-                <p><strong>Essential listing info</strong></p>
-                <p>title | $</p>
-                <p>new | used</p>
+                <p><strong>Iron Hammer</strong></p>
+                <p>$20</p>
             </div>
         </div>
         <!-- Listing card 4 -->
         <div class="listing-card">
-            <div class="listing-image">Listing image</div>
+            <div class="listing-image">
+                <img src="static\images\IMG-14.jpeg" alt="Hard Hat">
+            </div>
             <div class="listing-info">
-                <p><strong>Essential listing info</strong></p>
-                <p>title | $</p>
-                <p>new | used</p>
+                <p><strong>Hard Hat</strong></p>
+                <p>$10</p>
             </div>
         </div>
     </div>
@@ -55,7 +57,6 @@
     }
 
     .section-title {
-
         background: #1E90FF;
         color: black;
         font-weight: bold;
@@ -84,8 +85,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        color: #666;
-        font-size: 14px;
+        overflow: hidden;
+        border-radius: 8px;
+    }
+
+    .listing-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     .listing-info {
@@ -93,5 +100,7 @@
         font-size: 14px;
     }
 </style>
+
 {% endblock %}
+
 
