@@ -28,6 +28,44 @@ My web application social network will be a platform where people are able to se
 # Google Lighthouse Report 
 ![alt google lighthouse report](IMG-15.png)
 
+# Weekly Logs
+
+## Week 5
+- Set up my development environment in VS Code following the SET-UP document  
+- Downloaded Python, pip, and all the necessary extensions as per the document  
+- Set up all the files and folders necessary for my development environment  
+
+## Week 6
+- I started to create the necessary tables for my databases  
+- I put a little bit of test data in it and just played around with it  
+- I created some SQL queries to show my client in our meeting  
+
+## Week 7
+- Started working through the document to put some HTML and CSS in it  
+- Managed to get the server running and render one page  
+- ChatGPT helped me fix it so that it could render multiple pages  
+
+## Week 8
+- Styled my homepage, adding the colours for the background  
+- Finished formatting my website and styling all the pages  
+- Fixed up the header and layout of the web application  
+
+## Week 9
+- Managed to add images to it like the logo and on the homepage  
+- Ran a Google Lighthouse report on the web app  
+- Started working on adding simple sign-up and log-in pages  
+
+## Week 10
+- Simple sign-up and log-in pages working  
+- Formatted the sign-up and log-in to make them look better  
+- Ran test cases with my client — signing in working, yay!  
+
+## Week 1
+- Fixed bugs with the homepage not showing up properly  
+- Finished all the pages and made sure they work  
+- My client did the final user testing of my web application  
+
+
 # Instructions to run
 Download the files. Load into vs code. Run flask. Run python main.py 
 
