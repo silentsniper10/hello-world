@@ -11,7 +11,7 @@ My web application social network will be a platform where people are able to se
 - The website should be able to switch between the each page quickly
 - The website should respond to user interaction within 2 seconds
 # First wireframe sketch
-![wireframe sketch](IMG-8323.jpg)
+![wireframe sketch](IMG-16.png)
 # Alternate wireframe designs
 ![alt wireframe homepage](IMG-1.png)
 ![alt wireframe item listing](IMG-2.png)
