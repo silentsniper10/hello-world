@@ -26,7 +26,7 @@ My web application social network will be a platform where people are able to se
 | User has wrong login or password   | 1. Open login page <br> 2. Enter incorrect username or password               | A message is displayed that says “Wrong username or password, try again” and the user is prompted to enter their details again | N/A           |
 
 # Google Lighthouse Report 
-![alt google lighthouse report] (IMG-15.png)
+![alt google lighthouse report](IMG-15.png)
 
 # Instructions to run
 Download the files. Load into vs code. Run flask. Run python main.py 
